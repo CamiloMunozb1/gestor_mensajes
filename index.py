@@ -1,3 +1,6 @@
+from funciones_basicas.mensajes_predeterminados import generar_mensaje
+
+
 while True:
     try:
         print(
@@ -10,7 +13,7 @@ while True:
         """)
         usuario = int(input("Ingrese una opcion: "))
         if usuario == 1:
-            print("Proxima funcion")
+            generar_mensaje()
         elif usuario == 2:
             print("Proxima funcion")
         elif usuario == 3:
