@@ -1,4 +1,5 @@
 from funciones_basicas.mensajes_predeterminados import generar_mensaje
+from funciones_basicas.mensajes_nuevos import nuevo_mensaje
 
 
 while True:
@@ -15,7 +16,7 @@ while True:
         if usuario == 1:
             generar_mensaje()
         elif usuario == 2:
-            print("Proxima funcion")
+            nuevo_mensaje()
         elif usuario == 3:
             print("Proxima funcion")
         elif usuario == 4: 
