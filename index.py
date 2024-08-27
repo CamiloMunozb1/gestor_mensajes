@@ -1,5 +1,6 @@
 from funciones_basicas.mensajes_predeterminados import generar_mensaje
 from funciones_basicas.mensajes_nuevos import nuevo_mensaje
+from funciones_basicas.mostrar_mensajes import mensajes_completos
 
 
 while True:
@@ -18,7 +19,7 @@ while True:
         elif usuario == 2:
             nuevo_mensaje()
         elif usuario == 3:
-            print("Proxima funcion")
+            mensajes_completos()
         elif usuario == 4: 
             print("Muchas gracias por usar el gestor de mensajes, hasta pronto.")
             break
