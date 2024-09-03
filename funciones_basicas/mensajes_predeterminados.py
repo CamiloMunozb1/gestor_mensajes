@@ -1,8 +1,10 @@
-import random
+import sqlite3
+import pandas as pd
 
-
-def generar_mensaje():
-    mensajes = ["Cada línea de código es un paso más cerca de crear algo increíble.","El mejor código es el que no tienes que escribir dos veces.","La programación es un arte, y cada desarrollador es un artista.","La programación es la habilidad de convertir ideas en realidad, una línea de código a la vez",
-    "La programación es la habilidad de convertir ideas en realidad, una línea de código a la vez."]
-    mensaje_random = mensajes[random.randint(0,4)]
-    print(mensaje_random)
+def mensajes_aleatorio():
+    with sqlite3.connect("C:/Users/POWER/nuevos_mensajes.db") as mensaje_aleatorio:
+        consulta_cursor = mensaje_aleatorio.cursor()
+        consulta_cursor.execute("SELECT mensaje_predeterminado FROM mensajes_listos")
+        resultado = consulta_cursor.fetchall()
+        resultado_df = pd.DataFrame(resultado)
+    print(resultado_df)
