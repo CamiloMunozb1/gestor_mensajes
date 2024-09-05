@@ -1,5 +1,4 @@
 import sqlite3
-import pandas as pd
 
 def mensajes_completos():
     with sqlite3.connect("C:/Users/POWER/nuevos_mensajes.db") as mostrar_mensajes:
